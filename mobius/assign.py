@@ -29,7 +29,7 @@ class Assign():
 
     def set_shift_user_ids(self):
         """Patch request the user ids in for all of the assigned shifts!"""
-        c = staffjoy.Client(key=config.STAFFJOY_API_KEY, env=config.ENV)
+        c = staffjoy.Client(key=config.STAFFJOY_API_KEY, url_base=config.STAFFJOY_URL_BASE)
         org = c.get_organization(self.environment.organization_id)
         loc = org.get_location(self.environment.location_id)
         role = loc.get_role(self.environment.role_id)

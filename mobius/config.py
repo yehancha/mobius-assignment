@@ -12,6 +12,7 @@ class DefaultConfig:
     PAPERTRAIL = "logs2.papertrailapp.com:12345"
 
     TASKING_FETCH_INTERVAL_SECONDS = 20
+    STAFFJOY_URL_BASE = os.environ.get("STAFFJOY_URL_BASE")
     STAFFJOY_API_KEY = os.environ.get("STAFFJOY_API_KEY")
     DEFAULT_TZ = "utc"
     MAX_HOURS_PER_SHIFT = 23

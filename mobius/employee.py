@@ -284,7 +284,7 @@ class Employee:
         return True
 
     def _get_role_client(self):
-        c = staffjoy.Client(key=config.STAFFJOY_API_KEY, env=config.ENV)
+        c = staffjoy.Client(key=config.STAFFJOY_API_KEY, url_base=config.STAFFJOY_URL_BASE)
         org = c.get_organization(self.environment.organization_id)
         loc = org.get_location(self.environment.location_id)
         role = loc.get_role(self.environment.role_id)
