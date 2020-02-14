@@ -17,14 +17,14 @@ echo "echo 'export env=\"dev\"' >> /etc/profile" | sudo bash
 # Install gurobi
 # First remove remnants
 #rm -rf gurobi650
-rm -rf gurobi605
+rm -rf gurobi901
 
 # Unzip. Sometimes it throws a hard link error - hence the "or" statement
 #tar xfz gurobi6.5.0_linux64.tar.gz || :
-tar xfz gurobi6.0.5_linux64.tar.gz || :
+tar xfz gurobi9.0.1_linux64.tar.gz || :
 
 #cd gurobi650/linux64
-cd ./gurobi605/linux64/
+cd ./gurobi901/linux64/
 sudo python setup.py install
 cd ../..
 
@@ -34,7 +34,7 @@ cwd=`pwd`
 
 # Gurobi home
 #gurobi_home="$cwd/gurobi650/linux64/"
-gurobi_home="$cwd/gurobi605/linux64/"
+gurobi_home="$cwd/gurobi901/linux64/"
 echo "echo \"export GUROBI_HOME=$gurobi_home\" >> /etc/profile" | sudo bash
 echo "echo \"export LD_LIBRARY_PATH=${gurobi_home}lib/\" >> /etc/profile" | sudo bash
 

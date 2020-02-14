@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Environment Variables
 ENV PYTHONPATH "/src"
 ENV GRB_LICENSE_FILE "/src/build/licenses/default.lic"
-ENV GUROBI_HOME "/src/build/gurobi605/linux64/"
+ENV GUROBI_HOME "/src/build/gurobi901/linux64/"
 ENV LD_LIBRARY_PATH "${GUROBI_HOME}lib/"
 ENV PATH "${PATH}:${GUROBI_HOME}bin"
 ENV ENV test

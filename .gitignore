@@ -6,3 +6,6 @@ vagrant-venv/
 .cache/
 *.swp
 *.prm
+build/gurobi9.0.1_linux64.tar.gz
+build/gurobi901/
+build/licenses/default.lic
